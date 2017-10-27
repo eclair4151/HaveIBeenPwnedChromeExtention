@@ -1,16 +1,21 @@
  {
-  "name": "jQuery DOM",
+  "name": "Have i Been Pwned Password Checker",
   "version": "1",
   "manifest_version":2,
-  "description": "Manipulate the DOM when the page is done loading",
+  "description": "Checks all passwords against lists of known passwords leaked online via haveibeenpwned.com",
   "browser_action": {
     "name": "Manipulate DOM",
-    "icons": ["icon.png"],
-    "default_icon": "icon.png"
+    "icons": { "16": "icon16.png",
+          "128": "icon128.png" },
+    "default_icon": "icon128.png"
   },
   "content_scripts": [ {
   	"css": ["bootstrap.min.css"],
     "js": [ "jquery.min.js", "bootstrap.min.js" ,"popup.js" ],
     "matches": [ "http://*/*", "https://*/*"]
-  }]
+  }],
+  "permissions": [
+          "webRequest",
+          "*://haveibeenpwned.com/*"
+        ]
 }
