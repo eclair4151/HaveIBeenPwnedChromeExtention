@@ -1,0 +1,2 @@
+$( ":password" ).tooltip({title: "Hooray", placement: "bottom", html: true, template: '<div class="tooltip" role="tooltip"><div style="border-bottom-color: #ef3737;" class="tooltip-arrow"></div><div style="background-color: #ef3737;" class="tooltip-inner"></div></div>'});
+$( ":password" ).tooltip('show');
